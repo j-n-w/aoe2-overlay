@@ -1,0 +1,10 @@
+{
+  "1759": {
+    "name": "Ratha",
+    "help": "Create <b>Ratha<b> (<cost>)\nBengali unique Mounted Archer that can switch between melee and ranged attacks. Strong vs. Infantry. Weak vs. Skirmishers and Camel Riders.\n<GREY><i>Upgrades: attack, armor (Blacksmith); attack, accuracy (University); speed, HP (Stable); creation speed, to Elite Ratha (Castle); more resistant to Monks (Monastery).<i><DEFAULT>\n<hp> <attack> <armor> <piercearmor> <range>"
+  },
+  "1761": {
+    "name": "Elite Ratha",
+    "help": "Create <b>Elite Ratha<b> (<cost>)\nBengali unique Mounted Archer that can switch between melee and ranged attacks. Strong vs. Infantry. Weak vs. Skirmishers and Camel Riders.\n<GREY><i>Upgrades: attack, armor (Blacksmith); attack, accuracy (University); speed, HP (Stable); creation speed (Castle); more resistant to Monks (Monastery).<i><DEFAULT>\n<hp> <attack> <armor> <piercearmor> <range>"
+  }
+}

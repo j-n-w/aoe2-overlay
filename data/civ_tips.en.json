@@ -1,0 +1,690 @@
+{
+  "_note": "Hand-editable, sourced civ notes. Key = civ name as in aoe2techtree. Fields: profile (what the civ is about), dangers (what to expect and when), sources (wiki pages the text is based on), checked (date). Counters are NOT written here: the overlay computes them from the official in-game unit texts ('Strong vs./Weak vs.') and the tech trees (aoe2overlay/counters.py).",
+  "Armenians": {
+    "profile": "Infantry civ with strong mid/late economy (Mule Carts, faster mining), early Champions/Halberdiers and Composite Bowmen that ignore pierce armor.",
+    "dangers": [
+      "Castle: Champions/Halberdiers already in Castle Age",
+      "Composite Bowmen ignore pierce armor – Huskarls/Ghulams don't tank them",
+      "Warrior Priests keep infantry alive"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Armenians/Strategy",
+      "https://ageofempires.fandom.com/wiki/Composite_Bowman_(Age_of_Empires_II)"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Aztecs": {
+    "profile": "Infantry and monk civ: Garland Wars (+4 infantry attack), Jaguar Warriors, Eagle Warriors, tanky monks with every Monastery tech.",
+    "dangers": [
+      "Feudal: aggressive M@A or archers",
+      "Castle: Eagles + monks",
+      "Imperial: Garland Wars infantry"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Aztecs_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Bengalis": {
+    "profile": "Elephant and naval civ with the strongest elephants (take less bonus damage, resist conversion) and the Ratha (switches ranged/melee).",
+    "dangers": [
+      "Castle: Battle Elephant push",
+      "Imperial: Elite Rathas + elephants with Paiks",
+      "Water: ships regenerate"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Bengalis/Strategy",
+      "https://ageofempires.fandom.com/wiki/Ratha"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Berbers": {
+    "profile": "Cheap-Stable civ (-15% cavalry cost) with fast Villagers, Camel Archers and Genitours.",
+    "dangers": [
+      "Castle: one of the strongest Knight rushes (cheap Knights)",
+      "Imperial: Camel Archers beat enemy Cav Archers",
+      "Cheap Light Cav/Hussars in trash wars"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Berbers_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Bohemians": {
+    "profile": "Gunpowder and monk civ: free Mining Camp techs, Hand Cannoneers + Hussite Wagons (mobile shield vs arrows), Bombards, very strong monks.",
+    "dangers": [
+      "Imperial: Hand Cannoneers + Hussite Wagons + Bombard Cannons",
+      "Strong monks (cheap Sanctity/Fervor)"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Bohemians/Strategy",
+      "https://ageofempires.fandom.com/wiki/Hussite_Wagon"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Britons": {
+    "profile": "Archer civ: extra range (+3 with Yeomen), faster Archery Ranges, Longbowmen, Warwolf Trebuchets.",
+    "dangers": [
+      "Feudal: archer rush",
+      "Castle: crossbows that outrange your skirms/Mangonels",
+      "Imperial: Longbowmen"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Britons/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Bulgarians": {
+    "profile": "Infantry and cavalry civ: free Militia-line upgrades, Bagains (+5 melee armor), Konniks that dismount when killed, Stirrups.",
+    "dangers": [
+      "Feudal/Castle: auto-upgraded M@A/Long Swords",
+      "Castle: Konniks – you have to kill them twice",
+      "Imperial: Two-Handed Swordsmen with Bagains beat Champions"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Bulgarians/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Burgundians": {
+    "profile": "Cavalry civ with a top economy (eco techs one age earlier), Cavalier in Castle Age and Coustilliers with a one-shot charge.",
+    "dangers": [
+      "Castle: Cavaliers already in Castle Age",
+      "Coustillier charge one-shots most foot units in small fights",
+      "Strong eco + gold from farms (Vineyards)"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Burgundians/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Burmese": {
+    "profile": "Monk and Battle Elephant civ: armored elephants (Howdah), Manipur Cavalry (+4 vs archers), Arambai, cheap monk techs, relics revealed.",
+    "dangers": [
+      "Castle: Arambai volleys (dominant in Castle Age)",
+      "Imperial: Elite Battle Elephants with extra armor",
+      "Strong monks"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Burmese/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Byzantines": {
+    "profile": "Defensive counter-unit civ: tankier buildings, cheap Halberdiers/Skirms/Camels, Cataphracts (anti-infantry, little bonus damage taken).",
+    "dangers": [
+      "Castle: Cataphracts shred infantry",
+      "Cheap counter units make trash wars hard",
+      "Tanky walls/buildings"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Byzantines_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Celts": {
+    "profile": "Infantry and siege civ: fast lumberjacks, fast infantry, Woad Raiders, faster-firing tanky siege (Furor Celtica).",
+    "dangers": [
+      "Castle: fast rams/Mangonels",
+      "Imperial: Siege Onagers + Woad Raiders"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Celts/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Chinese": {
+    "profile": "Flexible eco civ: extra starting Villagers, cheaper techs, Chu Ko Nu, Rocketry; options for almost everything.",
+    "dangers": [
+      "Castle: fully upgraded Crossbows or Knights",
+      "Chu Ko Nu + Scorpions"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Chinese_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Cumans": {
+    "profile": "Fastest cavalry in the game (+5% speed per age), second Town Center in Feudal, full Stable incl. Paladin and Steppe Lancers, Kipchaks.",
+    "dangers": [
+      "Feudal: second TC boom or Feudal ram push",
+      "Castle: very fast Knights/Kipchaks raiding",
+      "Paladins late"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Cumans/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Danes": {
+    "profile": "Aggressive infantry and siege civ: loots resources from destroyed buildings, strong Varangian Guards, Jomsvikings and 10-range Siege Onagers.",
+    "dangers": [
+      "Feudal: M@A with Arson vs your buildings",
+      "Castle: Hamask infantry + Mangonels",
+      "Imperial: Siege Onagers with 10 range; Jomsvikings shred buildings and Knights"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Danes_(Age_of_Empires_II)/Strategy",
+      "https://ageofempires.fandom.com/wiki/Jomsviking",
+      "https://ageofempires.fandom.com/wiki/Varangian_Guard_(Age_of_Empires_II)"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Dravidians": {
+    "profile": "Infantry and naval civ: +200 wood per age, cheap Barracks techs, armor-ignoring melee (Wootz Steel), Urumi Swordsmen with splash charge.",
+    "dangers": [
+      "Castle: Urumi charge attacks on clumped units",
+      "Imperial: Wootz Steel infantry ignores armor",
+      "Water: Thirisadai"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Dravidians/Strategy",
+      "https://ageofempires.fandom.com/wiki/Urumi_Swordsman_(Age_of_Empires_II)"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Ethiopians": {
+    "profile": "Archer and siege civ: faster-firing archers, resources on age-up, free Pikeman upgrade, full Siege Workshop with Torsion Engines, Shotel Warriors.",
+    "dangers": [
+      "Feudal/Castle: fast archer mass",
+      "Imperial: Siege Onagers/Bombards with larger blast radius",
+      "Shotel Warriors train very fast"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Ethiopians_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Franks": {
+    "profile": "Classic Knight civ: +20% HP on mounted units, faster Stables (Chivalry), strong early/mid eco, cheaper Castles, Paladins.",
+    "dangers": [
+      "Castle: early Knight spike, Stables replace losses fast",
+      "Imperial: Paladins"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Franks/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Georgians": {
+    "profile": "Defensive cavalry civ: mounted units regenerate, starts with a Mule Cart, Monaspa (glass-cannon heavy cav that gets stronger in groups).",
+    "dangers": [
+      "Castle: Knights/Monaspa – units heal between fights",
+      "Large Monaspa groups hit very hard"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Georgians/Strategy",
+      "https://ageofempires.fandom.com/wiki/Monaspa"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Goths": {
+    "profile": "Infantry spam civ: cheap fast-training infantry, Huskarls nearly immune to arrows, extra pop in Imperial.",
+    "dangers": [
+      "Feudal: cheap M@A/infantry rush",
+      "Imperial: endless infantry spam, Huskarls kill archers and buildings"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Goths/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Gurjaras": {
+    "profile": "Camel and cavalry civ with a great food eco; cavalry deals extra bonus damage; Shrivamsha Riders dodge projectiles; Chakram Throwers vs infantry.",
+    "dangers": [
+      "Castle: Camels + Shrivamshas",
+      "Their cav deals 20–40% more bonus damage",
+      "Chakram Throwers shred light infantry"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Gurjaras/Strategy",
+      "https://ageofempires.fandom.com/wiki/Shrivamsha_Rider",
+      "https://ageofempires.fandom.com/wiki/Chakram_Thrower_(Age_of_Empires_II)"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Hindustanis": {
+    "profile": "Booming camel and gunpowder civ: cheap Villagers, the strongest Camels (Imperial Camel Rider), Ghulams vs archers, good archers/Hand Cannoneers.",
+    "dangers": [
+      "Castle: fast-attacking Camels, also strong vs buildings",
+      "Imperial: Imperial Camels + Hand Cannoneers + Ghulams"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Hindustanis/Strategy",
+      "https://ageofempires.fandom.com/wiki/Ghulam_(Age_of_Empires_II)"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Huns": {
+    "profile": "Rush-oriented cavalry civ: no Houses needed, faster Stables, cheap Cav Archers, Tarkans vs buildings, Paladins.",
+    "dangers": [
+      "Feudal: fast scout rush (no Houses)",
+      "Castle: Knights or Cav Archers",
+      "Tarkan raids on buildings"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Huns/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Incas": {
+    "profile": "Foot civ: Houses +5 pop, cheaper stone buildings, Villagers get infantry armor, cheap military food, Kamayuks, Slingers and Champi units.",
+    "dangers": [
+      "Feudal: tower rush / forward base",
+      "Castle: Kamayuks shred cavalry",
+      "Villagers are armored – rushing them is hard"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Inca_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Italians": {
+    "profile": "Archer and naval civ: cheap age-ups, cheaper gunpowder, Genoese Crossbowmen (anti-cav) and free-upgrade Condottieri (anti-gunpowder).",
+    "dangers": [
+      "Castle: Genoese Crossbowmen vs your cavalry",
+      "Imperial: Condottieri + Hand Cannoneers",
+      "Water: cheap navy"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Italians_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Japanese": {
+    "profile": "Infantry civ: infantry attacks 33% faster, Samurai (anti-unique unit), full archer and Cav Archer techs, strong navy.",
+    "dangers": [
+      "Feudal: M@A rush beats early archers",
+      "Imperial: Champions + Samurai"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Japanese_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Jurchens": {
+    "profile": "Cavalry and gunpowder civ: hunt doesn't decay, fast-attacking Scouts/Steppe Lancers, Iron Pagodas, Grenadiers and Castle Age Siege Engineers.",
+    "dangers": [
+      "Feudal: scout rush (+25% attack speed)",
+      "Castle: early Siege Engineers siege push, Iron Pagodas",
+      "Imperial: Grenadier blobs vs infantry"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Jurchens/Strategy",
+      "https://ageofempires.fandom.com/wiki/Iron_Pagoda_(Age_of_Empires_II)",
+      "https://ageofempires.fandom.com/wiki/Grenadier_(Age_of_Empires_II)"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Khitans": {
+    "profile": "Infantry and cavalry civ: huge food eco (Pastures), double-strength melee Blacksmith upgrades, bleeding Liao Dao and Heavy Cav Archers already in Castle Age.",
+    "dangers": [
+      "Feudal: harder-hitting melee (double Forging)",
+      "Castle: Heavy Cav Archers; Lamellar Armor reflects melee damage",
+      "Imperial: Liao Dao beat most melee units"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Khitans/Strategy",
+      "https://ageofempires.fandom.com/wiki/Liao_Dao",
+      "https://ageofempires.fandom.com/wiki/Mounted_Trebuchet"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Khmer": {
+    "profile": "Siege and elephant civ: Scorpions with double bolts, fast Battle Elephants, Ballista Elephants that can cut trees.",
+    "dangers": [
+      "Castle: fast Battle Elephants raiding",
+      "Imperial: Ballista Elephants + Scorpions (double bolts)",
+      "Ballista Elephants cutting into forest bases"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Khmer/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Koreans": {
+    "profile": "Defensive archer civ: -50% wood on archers/infantry, free archer armor, fast stone, auto-upgrading long-range towers, War Wagons.",
+    "dangers": [
+      "Feudal/Castle: tower rush / long-range towers",
+      "Mass cheap archers",
+      "War Wagons"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Koreans/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Lithuanians": {
+    "profile": "Cavalry and monk civ: +100 starting food, fast Spears/Skirms, Knights gain attack per Relic, Leitis ignore armor, Winged Hussars.",
+    "dangers": [
+      "Dark/Feudal: fast spear/skirm rushes",
+      "Castle: Knights with Relic bonus",
+      "Imperial: Leitis + Paladins"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Lithuanians/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Magyars": {
+    "profile": "Aggressive cavalry civ: free attack Blacksmith upgrades, cheap Scouts/Hussars, Magyar Huszars, strong Cav Archers.",
+    "dangers": [
+      "Feudal: Scout/M@A rush with free Forging",
+      "Imperial: mass Magyar Huszars/Hussars",
+      "Cav Archers"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Magyars/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Malay": {
+    "profile": "Naval civ: endless cheap Fish Traps, faster ages, Karambit Warrior fodder (half pop), cheap Battle Elephants, full Arbalesters/Halberdiers.",
+    "dangers": [
+      "Castle: Karambit swarm (half pop)",
+      "Imperial: cheap elephants + Arbalesters",
+      "Water: strong navy"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Malay/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Malians": {
+    "profile": "Infantry civ: cheaper buildings, extra gold mining, infantry gain pierce armor each age, fast Gbeto raiders, Tigui Town Centers.",
+    "dangers": [
+      "Feudal: M@A that tank arrows",
+      "Castle: Gbeto raids",
+      "Imperial: Champions/Gbetos + Farimba cavalry"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Malians_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Mapuche": {
+    "profile": "Cavalry civ without a Stable: Kona (cheap glass-cannon melee cav) and Bolas Riders (slowing mounted archers), backed by tanky Spear/Skirm trash.",
+    "dangers": [
+      "Feudal: tanky Spearmen/Skirmishers (+HP), even from Settlements",
+      "Castle: Kona + Bolas raids; Bolas slow your units",
+      "Imperial: Malon – Bolas/Slingers/Skirms deal pass-through damage"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Mapuche_(Age_of_Empires_II)",
+      "https://ageofempires.fandom.com/wiki/Kona",
+      "https://ageofempires.fandom.com/wiki/Bolas_Rider"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Mayans": {
+    "profile": "Strong archer civ: cheapest archers, extra Villager, longer-lasting resources, Plumed Archers and Holcans Eagles.",
+    "dangers": [
+      "Feudal/Castle: cheap archer mass",
+      "Eagles kill your skirms/siege",
+      "Imperial: Plumed Archers"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Maya_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Mongols": {
+    "profile": "Mobile raiding civ: fast hunting, faster-firing Cav Archers, Mangudai (anti-siege), tanky Light Cav/Steppe Lancers, fast siege.",
+    "dangers": [
+      "Feudal: scout rush",
+      "Castle/Imperial: Mangudai and Cav Archers",
+      "Imperial: fast Onagers/Siege Rams"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Mongols_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Muisca": {
+    "profile": "Archer and monk civ with a strong economy (cheap age-ups, free Caravan/Guilds) and Temple Guards as anti-cavalry infantry.",
+    "dangers": [
+      "Feudal: archer/Champi rush with extra melee armor",
+      "Castle: fully upgraded archers with Herbalism speed",
+      "Monk rush backed by Temple Guards – 10 Temple Guards beat 14 Knights"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Muisca/Strategy",
+      "https://ageofempires.fandom.com/wiki/Temple_Guard",
+      "https://ageofempires.fandom.com/wiki/Guecha_Warrior"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Persians": {
+    "profile": "Cavalry civ with full Stable, Savar (Paladin replacement), War Elephants, gold-free Kamandaran Crossbows, Parthian Tactics in Castle Age.",
+    "dangers": [
+      "Castle: Knights (+2 vs archers team bonus)",
+      "Imperial: War Elephants + Savar"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Persians_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Poles": {
+    "profile": "Versatile cavalry civ: cheap-gold Cavaliers, Winged Hussars with trample, durable armor-shredding Obuch, solid archers.",
+    "dangers": [
+      "Castle: Knights with Szlachta Privileges (less gold)",
+      "Imperial: Winged Hussar trample + Obuch beat Champions"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Poles_(Age_of_Empires_II)/Strategy",
+      "https://ageofempires.fandom.com/wiki/Obuch"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Portuguese": {
+    "profile": "Versatile gunpowder/naval civ: -20% gold on all units, faster research, Organ Guns, Caravels, Feitoria.",
+    "dangers": [
+      "Imperial: Organ Guns + Bombard Cannons",
+      "Always ahead in upgrades",
+      "Water: mass Caravels"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Portuguese_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Romans": {
+    "profile": "Infantry civ: 5% faster Villagers, extra infantry armor, Legionaries and Centurions (heavy cav that buffs infantry).",
+    "dangers": [
+      "Feudal: well-armored M@A",
+      "Castle/Imperial: Legionaries + Centurions"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Romans_(Age_of_Empires_II)/Strategy",
+      "https://ageofempires.fandom.com/wiki/Centurion_(Age_of_Empires_II)"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Saracens": {
+    "profile": "Archer and camel civ: archers deal extra building damage (archer flush), Market bonus, tanky Camels and Mamelukes.",
+    "dangers": [
+      "Feudal: archer flush breaks walls fast",
+      "Castle: Camels + archers",
+      "Imperial: Mamelukes"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Saracens/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Saxons": {
+    "profile": "Booming defensive infantry civ: free food/stone per drop site, up to -20% foot soldier cost, Shield Wall infantry deathball, double-arrow towers/castles.",
+    "dangers": [
+      "Feudal: tower rush with bonus stone",
+      "Castle: towers/castles fire double arrows",
+      "Imperial: mass Shield Wall infantry + Arbalesters"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Saxons/Strategy",
+      "https://ageofempires.fandom.com/wiki/Hearth_Troop"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Shu": {
+    "profile": "Archer and siege civ: Arbalesters with extra arrows (Bolt Magazine), War Chariots, faster siege and slowing White Feather Guards.",
+    "dangers": [
+      "Castle: crossbows with Bolt Magazine extra arrows",
+      "War Chariots shred archers",
+      "Fast-moving siege (rams, Traction Trebs)"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Shu/Strategy",
+      "https://ageofempires.fandom.com/wiki/War_Chariot_(Age_of_Empires_II)",
+      "https://ageofempires.fandom.com/wiki/White_Feather_Guard"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Sicilians": {
+    "profile": "Infantry/cavalry civ that takes reduced bonus damage; Serjeants build Donjons (tower that trains Serjeants); First Crusade spawns Serjeants.",
+    "dangers": [
+      "Feudal: Serjeants + Donjon push",
+      "Castle: units take less bonus damage (halbs/camels less effective)",
+      "Imperial: First Crusade Serjeant swarm"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Sicilians/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Slavs": {
+    "profile": "Infantry/siege civ: farmers 15% faster, cheap siege, Druzhina trample infantry, Boyars (armored heavy cav).",
+    "dangers": [
+      "Castle: Knight rush on strong farming",
+      "Imperial: Druzhina infantry blobs + cheap Onagers",
+      "Boyars tank melee"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Slavs/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Spanish": {
+    "profile": "Gunpowder and monk civ: faster-firing gunpowder, Conquistadors, Missionaries, Supremacy Villagers, Paladins; strong navy.",
+    "dangers": [
+      "Castle: Conquistadors (dominant then)",
+      "Imperial: Paladins, faster-firing Hand Cannons/Bombards"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Spanish_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Tatars": {
+    "profile": "Best Cav Archer civ (free Thumb Ring/Parthian, Silk Armor), Keshiks that generate gold, Flaming Camels vs cav/elephants.",
+    "dangers": [
+      "Castle: Cav Archer mass with free Thumb Ring",
+      "Keshik raids",
+      "Flaming Camels blow up cav/elephant blobs"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Tatars_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Teutons": {
+    "profile": "Slow, armored infantry/defense civ: extra infantry melee armor, Teutonic Knights, toughest Paladins, strong towers/castles.",
+    "dangers": [
+      "Castle: tower push",
+      "Imperial: Paladins + Teutonic Knights"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Teutons/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Tupi": {
+    "profile": "Aggressive foot archer/infantry civ: extra starting resources, 15% refund on fallen units, cheap Blackwood Archer swarms and AoE Ibirapema Warriors.",
+    "dangers": [
+      "Dark/Feudal: Champi Scout rush or tower rush",
+      "Castle: Blackwood Archer swarm (shreds Pikes/Halbs)",
+      "Imperial: Curare poison damage ignores armor (also on castles)"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Tupi_(Age_of_Empires_II)/Strategy",
+      "https://ageofempires.fandom.com/wiki/Blackwood_Archer",
+      "https://ageofempires.fandom.com/wiki/Ibirapema_Warrior"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Turks": {
+    "profile": "Gunpowder civ: free Chemistry, +25% HP gunpowder, free Light Cav/Hussar, Janissaries; huge Imperial spike.",
+    "dangers": [
+      "Imperial: Janissaries + Bombard Cannons + Hussars",
+      "Fast Imperial spike while you're in Castle Age"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Turks/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Varangians": {
+    "profile": "Cavalry and naval civ: tanky Cavaliers with trample, Jarls, and very strong Varangian Guards that earn gold while fighting.",
+    "dangers": [
+      "Feudal: scouts with Bloodlines (+10 extra HP)",
+      "Castle: Cavaliers with trample (Vendel Legacy)",
+      "Imperial: Varangian Guards throwing axes (Gothikon)"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Varangians/Strategy",
+      "https://ageofempires.fandom.com/wiki/Jarl_(Age_of_Empires_II)"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Vietnamese": {
+    "profile": "Archer civ with extra HP archers, Rattan Archers (high pierce armor) and Imperial Skirmishers; enemy TCs revealed.",
+    "dangers": [
+      "Castle: Rattan Archers beat your archers",
+      "Imperial: Imperial Skirmishers shred archers"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Vietnamese/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Vikings": {
+    "profile": "Infantry and naval civ: best economy (free Wheelbarrow/Hand Cart), tanky infantry, regenerating Berserks, Longboats.",
+    "dangers": [
+      "Feudal: M@A rush",
+      "Imperial: Berserks + Champions",
+      "Strong boom"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_II)/Strategy"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Wei": {
+    "profile": "Booming cavalry civ: free Villager per eco tech, Tiger Cavalry that grows stronger per kill, Xianbei Raiders, +4 melee armor for mounted units.",
+    "dangers": [
+      "Feudal: eco snowball from free Villagers",
+      "Castle: Tiger Cavalry wrecks archers and siege",
+      "Imperial: cavalry with +4 melee armor (Ming Guang)"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Wei/Strategy",
+      "https://ageofempires.fandom.com/wiki/Tiger_Cavalry_(Age_of_Empires_II)",
+      "https://ageofempires.fandom.com/wiki/Xianbei_Raider"
+    ],
+    "checked": "2026-11-12"
+  },
+  "Wu": {
+    "profile": "Infantry-focused all-rounder: regenerating infantry, anti-archer Jian Swordsmen, Fire Archers that outrange towers/castles, solid Hei Guang Cavalry.",
+    "dangers": [
+      "Feudal: scout rush (free food per military building)",
+      "Castle: Fire Archers sieging castles/towers from range",
+      "Imperial: regenerating infantry + Hei Guang Cavalry (+2 attack)"
+    ],
+    "sources": [
+      "https://ageofempires.fandom.com/wiki/Wu/Strategy",
+      "https://ageofempires.fandom.com/wiki/Jian_Swordsman",
+      "https://ageofempires.fandom.com/wiki/Fire_Archer_(Age_of_Empires_II)"
+    ],
+    "checked": "2026-11-12"
+  }
+}

@@ -1,0 +1,13 @@
+# Python / tooling
+.venv/
+__pycache__/
+*.pyc
+
+# PyInstaller output (rebuild with build_exe.bat)
+build/
+dist/
+*.spec
+
+# local caches and other projects
+data/cache/
+aoe2-overlay_OTHER_PROMPT/

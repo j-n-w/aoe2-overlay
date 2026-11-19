@@ -1,0 +1,179 @@
+{
+  "_note": "Hand-editable map notes, condensed from the cited wiki pages. Key = map name as the game/aoe2companion shows it; 'aliases' are other names that should match (e.g. custom map file names). Fields: resources (starting resources per player), extra (additional resources), tips (short), sources. The official one-line description comes from data/maps_official.json (tools/update_maps.py). Research pass 2026-11-12.",
+  "Arabia": {
+    "resources": "8 Sheep · 2 Boars · 2–4 Deer or 6–8 Chickens · 6 Berries · Gold 7/5/5 · Stone 5/4",
+    "extra": "Small 3-tile gold and stone piles scattered sparsely",
+    "tips": ["Open map – expect Feudal Age rushes", "Gold/stone in front of your base is the usual rush target", "Wood comes in medium patches, sometimes far apart"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Arabia"]
+  },
+  "Arena": {
+    "resources": "8 Sheep · 2 Boars · 4 Deer or 8 Chickens · 6 Berries · Gold 7/5/5 · Stone 5/4",
+    "extra": "1 gold + 1 stone pile just outside your walls, plus neutral piles in the middle",
+    "tips": ["You start behind stone walls – booming is safe, early rushes are slow", "Take the gold/stone just outside your walls first", "Big open middle – armies clash there later"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Arena"]
+  },
+  "Black Forest": {
+    "aliases": ["blackforest"],
+    "resources": "8 Sheep · 2 Boars · 4 Deer · 6 Berries · Gold 7/4/4 · Stone 5/4",
+    "extra": "3-boar packs and small fish ponds spawn out in the forest; extra gold/stone pile on each side",
+    "tips": ["Wall early – agree with teammates who walls which gap", "Look for the extra 3-boar packs and fish ponds – contest them", "Enemies may sneak a Villager in before your walls close"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Black_Forest"]
+  },
+  "Rage Forest": {
+    "aliases": ["rageforest", "rage_forest"],
+    "resources": "Like Black Forest: 8 Sheep · 2 Boars · 4 Deer · 6 Berries",
+    "extra": "Community Black Forest variant (Rage Forest tournaments) with fairer lake distribution between teams",
+    "tips": ["Wall early – agree with teammates who walls which gap", "Look for extra boar packs and fish ponds in the forest", "Combat usually ramps up late – boom behind walls"],
+    "sources": ["https://liquipedia.net/ageofempires/Black_Forest", "https://ageofempires.fandom.com/wiki/Black_Forest"]
+  },
+  "Nomad": {
+    "resources": "Sheep in pairs · single Boars · 3-Deer herds · 6 Berries · fish",
+    "extra": "No Town Center or Scout at start; +275 wood / +100 stone for the TC",
+    "tips": ["Find a spot with food and wood and build your Town Center fast", "Explore with one or two Villagers first"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Nomad_(map)"]
+  },
+  "Land Nomad": {
+    "resources": "Sheep/Cows · single Boars · 3-Deer herds · no Berries",
+    "extra": "No water; 3 scattered Villagers, +275 wood / +100 stone; 5-minute treaty",
+    "tips": ["Build your Town Center fast near food and wood"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Land_Nomad"]
+  },
+  "Hideout": {
+    "resources": "8 Sheep · 2 Boars · 4 Deer (inside or outside walls) · 6 Berries · Gold 5/4 · Stone 4/4",
+    "extra": "2 small gold piles + 1 stone pile near each player",
+    "tips": ["You only have palisades – add a second layer or Houses vs Feudal rushes", "Full booming is risky; fast Castle/Imperial pressure is common", "Most wood is in the center between players"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Hideout"]
+  },
+  "Fortress": {
+    "resources": "No herdables · 2 Boars · 6 Berries · Gold 7 · Stone 5",
+    "extra": "You start inside walls with towers",
+    "tips": ["Early rushes don't work – opponents harass resource camps outside walls", "Breaking in needs siege or a Castle drop"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Fortress_(map)"]
+  },
+  "Gold Rush": {
+    "resources": "8 Sheep · 2 Boars · 4 Deer · 6 Berries · Gold 4/3 · Stone 5/4",
+    "extra": "Most gold is in the central desert, guarded by wolves",
+    "tips": ["Fight for the central gold early – whoever holds it wins the economy", "Many wolves in the center"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Gold_Rush"]
+  },
+  "Atacama": {
+    "resources": "8 Sheep · 2 Boars · 4 Deer · 6 Berries · Gold 7/4/4 · Stone 5/4",
+    "extra": "Extra small gold/stone pile at a distance from each player; center has forests but few other resources",
+    "tips": ["Plenty of resources outside the center, but only small tree groups", "Control the outer gold/stone and deny it to the enemy"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Atacama"]
+  },
+  "Four Lakes": {
+    "resources": "Standard land start",
+    "extra": "Fish only in the four corner lakes",
+    "tips": ["Open map – rushes work as usual", "Contest the corner lakes for fish"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Four_Lakes"]
+  },
+  "Mongolia": {
+    "resources": "8 Sheep · 2 Boars · 3–4 Deer herds · 6 Berries · Gold 7/5/5 · Stone 5/4 · large woodlines",
+    "extra": "Cliffs create chokepoints",
+    "tips": ["Cliffs make walling easy – turtle and boom is viable", "Back walls with towers/castles and archers"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Mongolia"]
+  },
+  "Highland": {
+    "resources": "Standard start",
+    "extra": "Rivers with shallows between players; fish in rivers; extra Sheep pairs in corners",
+    "tips": ["Defend the shallows with towers or a Castle and patrol them", "Watch for landings by Transport Ship"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Highland"]
+  },
+  "Socotra": {
+    "resources": "6 Sheep · 1 Elephant · 5 Zebras · 6 Berries · Gold 4/4 · Stone 2/2",
+    "extra": "Tiny island, wood only at the map edge",
+    "tips": ["Close quarters – fighting starts immediately"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Socotra"]
+  },
+  "Islands": {
+    "resources": "8 Sheep · 2 Boars · 4 Deer · 6 Berries · fish",
+    "extra": "Every player on their own island",
+    "tips": ["Control the sea; attack with Transport Ships", "Resources are limited – wood can run out"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Islands"]
+  },
+  "Team Islands": {
+    "resources": "8 Sheep · 2 Boars · 3 Deer · 6 Berries · fish",
+    "extra": "Each team shares one island",
+    "tips": ["The navy decides the game"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Team_Islands", "https://ageofempires.fandom.com/wiki/Islands"]
+  },
+  "Baltic": {
+    "resources": "Standard start",
+    "extra": "Central sea; teams connected by narrow land strips",
+    "tips": ["Wall the narrow land strips", "Control the sea; attack with transports and Galleons"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Baltic"]
+  },
+  "Coastal": {
+    "resources": "8 Sheep · 2 Boars · 4 Deer · 6 Berries · fish",
+    "extra": "Half water, half open land",
+    "tips": ["Land rushes work – few natural walls", "Fewer land resources – use fish"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Coastal"]
+  },
+  "Continental": {
+    "resources": "Standard start",
+    "extra": "Rivers/lakes between teams with shallows; wood in piles; more gold than usual",
+    "tips": ["Watch the shallows and land passes to the center"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Continental"]
+  },
+  "Mediterranean": {
+    "resources": "Standard start",
+    "extra": "Central sea; extra herdables in groups of three around the land ring",
+    "tips": ["Scout for the extra herdables", "Control the central sea (fish, transports)"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Mediterranean"]
+  },
+  "Ghost Lake": {
+    "resources": "8 Sheep · 2 Boars · 4 Deer · 6 Berries · Gold 7/4/4 · Stone 5/4",
+    "extra": "Fewer resources than usual, many wolves",
+    "tips": ["Feudal rush into fast Castle works well", "Wolves punish early Militia/Villagers"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Ghost_Lake"]
+  },
+  "Oasis": {
+    "resources": "Standard start",
+    "extra": "Asymmetric central forest around a lake",
+    "tips": ["Both turtle-and-boom and early rushes work"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Oasis"]
+  },
+  "Acropolis": {
+    "resources": "8 Sheep · 2 Boars · 3–4 Deer · 6 Berries · Gold 4/3 · stone only in the valley",
+    "extra": "You start on a plateau; slopes can't be built on",
+    "tips": ["Hill bonus helps defense, but walling is hard", "Few resources on top – you must go down eventually"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Acropolis_(map)"]
+  },
+  "Budapest": {
+    "resources": "Standard start",
+    "extra": "Every player starts with two Town Centers",
+    "tips": ["Very fast economy and Feudal times", "Enemy TC can be close – turtling is hard"],
+    "sources": ["https://ageofempires.fandom.com/wiki/Budapest"]
+  },
+  "MegaRandom": {
+    "resources": "Unknown",
+    "extra": "Random layout every game",
+    "tips": ["Scout a lot and adapt to the layout"],
+    "sources": ["https://ageofempires.fandom.com/wiki/MegaRandom"]
+  },
+  "Amazon Tunnel": {
+    "resources": "8 Sheep · 3 Boars · 3 Deer · 6 Berries · Gold 6/6/6 · Stone 4/4",
+    "extra": "",
+    "tips": [],
+    "sources": ["https://ageofempires.fandom.com/wiki/Amazon_Tunnel"]
+  },
+  "Enclosed": {
+    "resources": "8 Buffalos · 2 Elephants · 4 Deer",
+    "extra": "Berries, gold and stone only outside the enclosure (many small piles in the outer ring)",
+    "tips": [],
+    "sources": ["https://ageofempires.fandom.com/wiki/Enclosed"]
+  },
+  "Lombardia": {
+    "resources": "8 Cows · 2 Boars · 3–4 Deer · 6 Berries · Gold 7/4/4 · Stone 5/4",
+    "extra": "",
+    "tips": [],
+    "sources": ["https://ageofempires.fandom.com/wiki/Lombardia"]
+  },
+  "African Clearing": {
+    "resources": "Sheep pairs · Elephants · 3-Deer herds · no Berries · fish in ponds",
+    "extra": "Nomad-type start; sparse trees, dense forest at the map edge",
+    "tips": [],
+    "sources": ["https://ageofempires.fandom.com/wiki/African_Clearing"]
+  }
+}
