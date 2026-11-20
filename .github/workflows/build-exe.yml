@@ -1,7 +1,11 @@
-name: build-exe
+name: release
+# Push a tag like v1.2 -> builds the .exe on Windows and publishes a GitHub release with
+#   AoE2-Counter-Overlay.exe          (single file, no Python needed)
+#   AoE2-Counter-Overlay-source.zip   (start.bat / demo.bat, for PCs that block unsigned .exe files)
+# Stable direct links: https://github.com/j-n-w/aoe2-overlay/releases/latest/download/<file name>
 on:
   push:
-    branches: [build-exe]
+    tags: ["v*"]
   workflow_dispatch:
 permissions:
   contents: write
@@ -19,11 +23,29 @@ jobs:
           python -m pip install -q -r requirements.txt pyinstaller
           python tools\check_data.py || exit /b 1
           python -m PyInstaller --noconfirm --clean --onefile --windowed --name AoE2-Counter-Overlay --collect-submodules websockets --add-data "data\techtree;data\techtree" --add-data "data\civ_tips.en.json;data" --add-data "data\maps.en.json;data" --add-data "data\maps_official.json;data" --add-data "data\unit_texts_game.json;data" run_overlay.py
-      - name: Publish to branch exe
+      - name: Source zip
         shell: bash
+        run: git archive --format=zip --prefix=aoe2-overlay/ -o dist/AoE2-Counter-Overlay-source.zip HEAD
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          mkdir out && cp dist/AoE2-Counter-Overlay.exe out/ && cd out
-          echo "Built from ${GITHUB_SHA}" > BUILD.txt
-          git init -q -b exe && git config user.name github-actions && git config user.email actions@github.com
-          git add . && git commit -qm "exe from ${GITHUB_SHA}"
-          git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" exe
+          cat > notes.md <<'EOF'
+          **AoE2-Counter-Overlay.exe** – download and double-click, no installation. It sits as a yellow "C" in the tray and shows up by itself when your game starts.
+          On the first start it asks who you are (Stammtisch list, or your aoe2companion profile id / link).
+
+          If Windows blocks the .exe ("Smart App Control"): use **AoE2-Counter-Overlay-source.zip**, install Python 3.12 (Microsoft Store or python.org) and double-click `start.bat`.
+
+          Set AoE2 to *Windowed Fullscreen / borderless*. F9 show/hide · Shift+F9 compact/detail · Ctrl+F9 click-through.
+          Reads only public match data from aoe2companion.com – no game memory, no input, no screen reading.
+          EOF
+          gh release create "$GITHUB_REF_NAME" dist/AoE2-Counter-Overlay.exe dist/AoE2-Counter-Overlay-source.zip \
+            --title "AoE2 Counter Overlay $GITHUB_REF_NAME" --notes-file notes.md
+      - name: Keep build (manual runs)
+        if: "!startsWith(github.ref, 'refs/tags/')"
+        uses: actions/upload-artifact@v4
+        with:
+          name: AoE2-Counter-Overlay
+          path: dist/

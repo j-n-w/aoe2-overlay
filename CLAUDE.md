@@ -63,6 +63,8 @@ Benötigt werden pro Spieler: Name, `profile\_id`, Zivilisation, Team. Eigenes T
 * Python 3.12, PySide6 für das Fenster, `websockets` für den Live-Kanal.
 * Globale Hotkeys über die Windows-API `RegisterHotKey` (`aoe2overlay/hotkeys.py`, kein Keyboard-Hook, kein pynput): Windows meldet nur die gebundenen Kombinationen und hält sie vom Spiel fern.
 * Benutzerdaten in `%APPDATA%\AoE2CounterOverlay`: `config.json` (profile_id, Hotkeys, Transparenz, Position, `hide_after_game_s`), `overlay.log`, `socket-raw.log` (alle Live-Nachrichten), Icon-Cache. Mitgelieferte Daten (`data/`) liegen in der .exe.
+* Spielerwahl: `profile_id` 0 = beim Start fragen („who are you?“, `aoe2overlay/player.py`: Stammtisch-Liste von age-stammtisch.de/liga/api.php?action=get oder aoe2companion-ID/Link); Tray → „Change player …“ wechselt ohne Neustart. Andere Stammtisch-Spieler nutzen das Overlay ebenfalls.
+* Releases: Tag `v*` pushen → GitHub Actions (`.github/workflows/build-exe.yml`) baut .exe + Quellcode-ZIP und hängt beide ans Release; Direktlinks `releases/latest/download/AoE2-Counter-Overlay.exe` bzw. `-source.zip` (verlinkt auf age-stammtisch.de/overlay.html).
 * Paketierung: `build_exe.bat` (PyInstaller, eine `.exe` in `dist/`), Start aus dem Quellcode mit `start.bat` / `demo.bat`. Autostart optional über das Tray-Menü (HKCU-Run-Eintrag, nur für die .exe).
 * Tray-Menü: Ein/Aus, Kompakt/Detail, Sperren, Demo, letztes Match, Einstellungsordner, Mit Windows starten, Beenden.
 

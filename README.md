@@ -6,9 +6,11 @@ It only reads **public match data** from aoe2companion.com. It does not read gam
 
 ## Start
 
-**Option A – the .exe (no Python needed):** run `dist\AoE2-Counter-Overlay.exe`. It sits as a yellow "C" in the tray (bottom right) and appears by itself when a game starts.
+**Option A – the .exe (no Python needed):** download `AoE2-Counter-Overlay.exe` from the [latest release](https://github.com/j-n-w/aoe2-overlay/releases/latest) and double-click it. It sits as a yellow "C" in the tray (bottom right) and appears by itself when a game starts.
 
-**Option B – from source:** install Python 3.12 (python.org, tick **"Add python.exe to PATH"**), then double-click `start.bat`. The first run sets everything up (1–2 minutes). `demo.bat` shows a sample 3v3 match without a running game.
+**Option B – from source** (also the way round Windows "Smart App Control", which blocks unsigned .exe files): download `AoE2-Counter-Overlay-source.zip` from the same release, install Python 3.12 (Microsoft Store, or python.org with **"Add python.exe to PATH"** ticked), unzip and double-click `start.bat`. The first run sets everything up (1–2 minutes). `demo.bat` shows a sample 3v3 match without a running game.
+
+**First start:** the overlay asks who you are – pick your name from the Stammtisch list (age-stammtisch.de) or type your aoe2companion profile id or profile link. Change it later via tray → *Change player …*.
 
 **Important:** set AoE2 to **Windowed Fullscreen / borderless**. In exclusive fullscreen Windows can't draw anything on top of the game.
 
@@ -25,7 +27,7 @@ The overlay appears 10–30 seconds after the game starts (that's how long aoe2c
 | link bar at the top | jump to map, an enemy, you or an ally (switches to detail view) |
 | drag anywhere | move the window |
 | bottom-right corner | resize |
-| tray icon, right-click | demo match, last match, settings folder, start with Windows, quit |
+| tray icon, right-click | demo match, last match, change player, settings folder, start with Windows, quit |
 
 Bound keys are taken by the overlay and don't reach the game (F9 would otherwise open AoE2's hotkey list). If you need one of them in AoE2, choose another key in the settings.
 
@@ -42,7 +44,7 @@ Tray → **Open settings folder** (`%APPDATA%\AoE2CounterOverlay`). `config.json
 
 | key | meaning |
 |---|---|
-| `profile_id` | your aoe2companion profile (21339043) |
+| `profile_id` | your aoe2companion profile (0 = ask on next start) |
 | `hotkey_toggle`, `hotkey_mode`, `hotkey_lock` | e.g. `"F9"`, `"shift+F9"`, `"ctrl+alt+o"`, `"pause"` |
 | `hide_after_game_s` | seconds the overlay stays after the game ends |
 | `opacity` | background opacity 0.0–1.0 |
@@ -65,7 +67,7 @@ Restart the overlay after editing (tray → Quit, then start again).
 .venv\Scripts\python.exe tools\check_data.py
 ```
 
-New civs get computed counters automatically; `tools\check_data.py` reports civs that are missing wiki notes. Then rebuild the .exe with `build_exe.bat`.
+New civs get computed counters automatically; `tools\check_data.py` reports civs that are missing wiki notes. Then rebuild the .exe with `build_exe.bat`, or publish a release: push a tag like `v1.2` and GitHub Actions builds the .exe and the source zip and attaches both to the release (`.github/workflows/build-exe.yml`).
 
 ## Development
 

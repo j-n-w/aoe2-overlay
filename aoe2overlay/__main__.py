@@ -18,6 +18,7 @@ from .logs import setup_logging
 from .match import demo_match, fetch_last_match
 from . import autostart
 from .overlay import Overlay
+from .player import ask_player, profile_name
 
 log = logging.getLogger("aoe2overlay")
 
@@ -69,11 +70,36 @@ def main() -> int:
     icon = make_icon()
     app.setWindowIcon(icon)
 
+    # whose games to follow: asked once, changeable from the tray menu
+    if cfg.profile_id <= 0 and not args.screenshot:
+        pid = ask_player()
+        if pid is None:
+            return 0
+        cfg.profile_id = pid
+        cfg.save()
+        log.info("player set to %s", pid)
+
     win = Overlay(cfg)
     if args.detail:
         win.compact = False  # only for this run, not saved
 
     feed = None
+
+    def start_feed():
+        nonlocal feed
+        if feed:  # switching player: the old feed must not report anything any more
+            for sig in (feed.match_started, feed.match_ended, feed.status):
+                try:
+                    sig.disconnect()
+                except (RuntimeError, TypeError):
+                    pass
+            feed.stop()
+        feed = ReplayFeed(cfg.profile_id, args.replay) if args.replay else LiveFeed(cfg.profile_id)
+        feed.match_started.connect(lambda m: on_started(win, m), Qt.QueuedConnection)
+        feed.match_ended.connect(lambda mid: on_ended(win, cfg.hide_after_game_s), Qt.QueuedConnection)
+        feed.status.connect(win.set_status, Qt.QueuedConnection)
+        feed.start()
+
     if args.demo:
         win.set_match(demo_match(cfg.profile_id))
     elif args.last_match:
@@ -83,11 +109,7 @@ def main() -> int:
         except Exception as e:  # show network errors instead of crashing
             win.set_status(f"API error: {e}")
     else:
-        feed = ReplayFeed(cfg.profile_id, args.replay) if args.replay else LiveFeed(cfg.profile_id)
-        feed.match_started.connect(lambda m: on_started(win, m), Qt.QueuedConnection)
-        feed.match_ended.connect(lambda mid: on_ended(win, cfg.hide_after_game_s), Qt.QueuedConnection)
-        feed.status.connect(win.set_status, Qt.QueuedConnection)
-        feed.start()
+        start_feed()
         # show briefly so it's clear the app runs, then wait hidden for the game start
         QTimer.singleShot(4000, lambda: win.hide() if win.match is None else None)
     win.show()
@@ -109,6 +131,18 @@ def main() -> int:
                        checked=win.locked, triggered=lambda checked: win.set_locked(checked))
     act_demo = QAction("Show demo match", menu, triggered=lambda: on_started(win, demo_match(cfg.profile_id)))
     act_last = QAction("Show last match", menu, triggered=lambda: show_last_match(win, cfg.profile_id))
+    def change_player():
+        pid = ask_player(cfg.profile_id)
+        if pid is None or pid == cfg.profile_id:
+            return
+        cfg.profile_id = pid
+        cfg.save()
+        log.info("player changed to %s", pid)
+        win.set_match(None, f"Now following {profile_name(pid) or pid} – waiting for game start …")
+        win.show()
+        if feed or not (args.demo or args.last_match):
+            start_feed()
+    act_player = QAction("Change player …", menu, triggered=change_player)
     act_folder = QAction("Open settings folder", menu, triggered=lambda: os.startfile(user_dir()))
     act_auto = QAction("Start with Windows", menu, checkable=True)
     act_auto.setEnabled(autostart.available())
@@ -125,7 +159,7 @@ def main() -> int:
     menu.addSeparator()
     menu.addActions([act_demo, act_last])
     menu.addSeparator()
-    menu.addActions([act_folder, act_auto])
+    menu.addActions([act_player, act_folder, act_auto])
     menu.addSeparator()
     menu.addAction(act_quit)
     tray.setContextMenu(menu)

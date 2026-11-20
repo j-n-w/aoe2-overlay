@@ -8,7 +8,7 @@ from dataclasses import dataclass
 
 from .civdata import Civ, find_civ
 
-USER_AGENT = "aoe2-counter-overlay/0.1 (personal overlay project)"
+USER_AGENT = "aoe2-counter-overlay/1.1 (+https://github.com/j-n-w/aoe2-overlay)"
 API_MATCHES = ("https://data.aoe2companion.com/api/matches?profile_ids={pid}"
                "&use_enums=true&page=1&per_page=1")
 
