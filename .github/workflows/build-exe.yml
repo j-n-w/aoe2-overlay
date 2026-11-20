@@ -1,11 +1,12 @@
 name: release
-# Push a tag like v1.2 -> builds the .exe on Windows and publishes a GitHub release with
+# Raise the number in VERSION on main (e.g. 1.2) -> builds the .exe on Windows and publishes a GitHub release with
 #   AoE2-Counter-Overlay.exe          (single file, no Python needed)
 #   AoE2-Counter-Overlay-source.zip   (start.bat / demo.bat, for PCs that block unsigned .exe files)
 # Stable direct links: https://github.com/j-n-w/aoe2-overlay/releases/latest/download/<file name>
 on:
   push:
-    tags: ["v*"]
+    branches: [main]
+    paths: [VERSION]
   workflow_dispatch:
 permissions:
   contents: write
@@ -27,11 +28,15 @@ jobs:
         shell: bash
         run: git archive --format=zip --prefix=aoe2-overlay/ -o dist/AoE2-Counter-Overlay-source.zip HEAD
       - name: Release
-        if: startsWith(github.ref, 'refs/tags/')
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          TAG="v$(tr -d ' \r\n' < VERSION)"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/AoE2-Counter-Overlay.exe dist/AoE2-Counter-Overlay-source.zip --clobber
+            exit 0
+          fi
           cat > notes.md <<'EOF'
           **AoE2-Counter-Overlay.exe** – download and double-click, no installation. It sits as a yellow "C" in the tray and shows up by itself when your game starts.
           On the first start it asks who you are (Stammtisch list, or your aoe2companion profile id / link).
@@ -41,11 +46,5 @@ jobs:
           Set AoE2 to *Windowed Fullscreen / borderless*. F9 show/hide · Shift+F9 compact/detail · Ctrl+F9 click-through.
           Reads only public match data from aoe2companion.com – no game memory, no input, no screen reading.
           EOF
-          gh release create "$GITHUB_REF_NAME" dist/AoE2-Counter-Overlay.exe dist/AoE2-Counter-Overlay-source.zip \
-            --title "AoE2 Counter Overlay $GITHUB_REF_NAME" --notes-file notes.md
-      - name: Keep build (manual runs)
-        if: "!startsWith(github.ref, 'refs/tags/')"
-        uses: actions/upload-artifact@v4
-        with:
-          name: AoE2-Counter-Overlay
-          path: dist/
+          gh release create "$TAG" dist/AoE2-Counter-Overlay.exe dist/AoE2-Counter-Overlay-source.zip \
+            --target "$GITHUB_SHA" --title "AoE2 Counter Overlay $TAG" --notes-file notes.md

@@ -67,7 +67,7 @@ Restart the overlay after editing (tray → Quit, then start again).
 .venv\Scripts\python.exe tools\check_data.py
 ```
 
-New civs get computed counters automatically; `tools\check_data.py` reports civs that are missing wiki notes. Then rebuild the .exe with `build_exe.bat`, or publish a release: push a tag like `v1.2` and GitHub Actions builds the .exe and the source zip and attaches both to the release (`.github/workflows/build-exe.yml`).
+New civs get computed counters automatically; `tools\check_data.py` reports civs that are missing wiki notes. Then rebuild the .exe with `build_exe.bat`, or publish a release: raise the number in `VERSION` on main (e.g. `1.2`) and GitHub Actions builds the .exe and the source zip and attaches both to the release (`.github/workflows/build-exe.yml`).
 
 ## Development
 
