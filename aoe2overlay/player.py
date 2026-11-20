@@ -61,8 +61,8 @@ def parse_profile(text: str, known: dict[str, int]) -> int | None:
     return int(nums[-1]) if len(nums) == 1 else None
 
 
-def ask_player(current: int = 0) -> int | None:
-    """Shows the "Who are you?" box until a valid profile is chosen. None = cancelled."""
+def ask_player(current: int = 0) -> tuple[int, str] | None:
+    """Shows the "Who are you?" box until a valid profile is chosen: (profile id, name). None = cancelled."""
     players = stammtisch_players()
     known = {f"{name}  ({pid})": pid for name, pid in players}
     items = list(known)
@@ -80,7 +80,7 @@ def ask_player(current: int = 0) -> int | None:
             QMessageBox.warning(None, "AoE2 Counter Overlay", "That is not a profile id or profile link.")
             continue
         if pid in known.values():
-            return pid
+            return pid, next(n for n, p in players if p == pid)
         name = profile_name(pid)
         if name is None:
             again = QMessageBox.question(
@@ -88,4 +88,8 @@ def ask_player(current: int = 0) -> int | None:
                 f"aoe2companion doesn't know profile {pid} (or can't be reached). Use it anyway?")
             if again != QMessageBox.Yes:
                 continue
-        return pid
+        return pid, name or ""
+
+
+def player_label(pid: int, name: str) -> str:
+    return name or f"profile {pid}"

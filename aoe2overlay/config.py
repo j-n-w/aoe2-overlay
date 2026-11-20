@@ -54,6 +54,7 @@ def _migrate_old_files() -> None:
 @dataclass
 class Config:
     profile_id: int = 0             # aoe2companion profile; 0 = ask on start ("who are you?")
+    player_name: str = ""           # shown in the tray menu so a wrong pick is easy to spot
     hotkey_toggle: str = "F9"
     hotkey_mode: str = "shift+F9"   # not F10: that opens AoE2's game menu
     hotkey_lock: str = "ctrl+F9"

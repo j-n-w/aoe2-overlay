@@ -18,7 +18,7 @@ from .logs import setup_logging
 from .match import demo_match, fetch_last_match
 from . import autostart
 from .overlay import Overlay
-from .player import ask_player, profile_name
+from .player import ask_player, player_label
 
 log = logging.getLogger("aoe2overlay")
 
@@ -72,10 +72,11 @@ def main() -> int:
 
     # whose games to follow: asked once, changeable from the tray menu
     if cfg.profile_id <= 0 and not args.screenshot:
-        pid = ask_player()
-        if pid is None:
+        chosen = ask_player()
+        if chosen is None:
             return 0
-        cfg.profile_id = pid
+        cfg.profile_id, cfg.player_name = chosen
+        pid = cfg.profile_id
         cfg.save()
         log.info("player set to %s", pid)
 
@@ -123,7 +124,7 @@ def main() -> int:
 
     # tray menu (the overlay has no taskbar entry)
     tray = QSystemTrayIcon(icon)
-    tray.setToolTip("AoE2 Counter Overlay")
+    tray.setToolTip(f"AoE2 Counter Overlay – {player_label(cfg.profile_id, cfg.player_name)}")
     menu = QMenu()
     act_show = QAction(f"Show/hide ({cfg.hotkey_toggle})", menu, triggered=win.toggle_visible)
     act_mode = QAction(f"Compact/detail ({cfg.hotkey_mode})", menu, triggered=win.toggle_mode)
@@ -132,17 +133,21 @@ def main() -> int:
     act_demo = QAction("Show demo match", menu, triggered=lambda: on_started(win, demo_match(cfg.profile_id)))
     act_last = QAction("Show last match", menu, triggered=lambda: show_last_match(win, cfg.profile_id))
     def change_player():
-        pid = ask_player(cfg.profile_id)
-        if pid is None or pid == cfg.profile_id:
+        chosen = ask_player(cfg.profile_id)
+        if chosen is None or chosen[0] == cfg.profile_id:
             return
-        cfg.profile_id = pid
+        cfg.profile_id, cfg.player_name = chosen
         cfg.save()
-        log.info("player changed to %s", pid)
-        win.set_match(None, f"Now following {profile_name(pid) or pid} – waiting for game start …")
+        log.info("player changed to %s", cfg.profile_id)
+        label = player_label(cfg.profile_id, cfg.player_name)
+        act_player.setText(f"Player: {label} – change …")
+        tray.setToolTip(f"AoE2 Counter Overlay – {label}")
+        win.set_match(None, f"Now following {label} – waiting for game start …")
         win.show()
         if feed or not (args.demo or args.last_match):
             start_feed()
-    act_player = QAction("Change player …", menu, triggered=change_player)
+    act_player = QAction(f"Player: {player_label(cfg.profile_id, cfg.player_name)} – change …", menu,
+                         triggered=change_player)
     act_folder = QAction("Open settings folder", menu, triggered=lambda: os.startfile(user_dir()))
     act_auto = QAction("Start with Windows", menu, checkable=True)
     act_auto.setEnabled(autostart.available())
