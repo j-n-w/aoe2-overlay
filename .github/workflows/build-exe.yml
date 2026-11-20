@@ -1,0 +1,29 @@
+name: build-exe
+on:
+  push:
+    branches: [build-exe]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build
+        shell: cmd
+        run: |
+          python -m pip install -q -r requirements.txt pyinstaller
+          python tools\check_data.py || exit /b 1
+          python -m PyInstaller --noconfirm --clean --onefile --windowed --name AoE2-Counter-Overlay --collect-submodules websockets --add-data "data\techtree;data\techtree" --add-data "data\civ_tips.en.json;data" --add-data "data\maps.en.json;data" --add-data "data\maps_official.json;data" --add-data "data\unit_texts_game.json;data" run_overlay.py
+      - name: Publish to branch exe
+        shell: bash
+        run: |
+          mkdir out && cp dist/AoE2-Counter-Overlay.exe out/ && cd out
+          echo "Built from ${GITHUB_SHA}" > BUILD.txt
+          git init -q -b exe && git config user.name github-actions && git config user.email actions@github.com
+          git add . && git commit -qm "exe from ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" exe
